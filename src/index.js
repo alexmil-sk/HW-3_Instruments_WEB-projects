@@ -1,9 +1,12 @@
 ' use strict';
 
+//import './styles/style.css';
+import './styles/style.scss';
 
-import Gallery from './script.js';
-import './styles/style.css';
-import Landscape1 from './assets/img/landscape-1.jpg';
+import { drawGalleryItem } from './item';
+import items from './items';
 
-//const gallery = new Gallery('галерея фото-видео', Landscape1);
+const galleryRootElement = document.querySelector('#galleryRoot');
+
+items.map(item => galleryRootElement.appendChild(drawGalleryItem(item)));
 
