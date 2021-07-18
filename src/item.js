@@ -76,6 +76,7 @@ function drawVideo(item) {
 	const videoElement = document.createElement('video');
 	videoElement.className = 'gallery__item_video';
 	videoElement.src = item.src;
+	videoElement.controls = true;
 
 	return videoElement;
 }
